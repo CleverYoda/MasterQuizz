@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Examen!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Écran de démarrage -->
+    <div id="start-screen" class="screen active">
+        <h1 id="quiz-title">Votre Examen!</h1>
+        <div id="time-selection">
+            <div id="time-options-container"></div>
+        </div>
+        <button id="start-btn" disabled>Commencer l'examen</button>
+    </div>
+
+    <!-- Interface du quiz -->
+    <div id="quiz-screen" class="screen">
+        <div class="header-block">
+            <div class="progress-display">
+                <span class="progress-text">Question</span>
+                <span id="current-question" class="progress-number">1</span>
+                <span class="progress-total">/7</span>
+            </div>
+            <div class="timer-display">
+                <span class="timer-icon">⏳</span>
+                <span id="timer" class="timer-text">00:00:00</span>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <h2 id="question"></h2>
+            <div id="answers"></div>
+        </div>
+
+        <div class="button-container">
+            <button id="prev-btn" class="nav-button prev-button">← Précédent</button>
+            <button id="next-btn" class="nav-button next-button">Suivant →</button>
+        </div>
+    </div>
+
+    <!-- Écran des résultats -->
+    <div id="results-screen" class="screen">
+        <div class="results-container">
+            <div class="summary-card">
+                <div class="summary-item">
+                    <span class="summary-label">Réponses correctes</span>
+                    <span class="summary-value correct-text" id="correct-count">0/7</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Score total</span>
+                    <span class="summary-value" id="score-display">0</span><span class="summary-value">/</span><span class="summary-value"  id="total-points">35</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Pourcentage</span>
+                    <span class="summary-value" id="score-percentage">0.00%</span>
+                </div>
+            </div>
+
+            <div id="questions-results"></div>
+
+            <div class="retake-container">
+                <button id="retake-btn" class="retake-button">↻ Refaire l'examen</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="quiz-data-HF2.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
