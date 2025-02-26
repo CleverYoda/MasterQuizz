@@ -34,7 +34,7 @@ const domElements = {
 // Initialisation
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('quiz-title').textContent = quizConfig.title;
-    document.querySelectorAll('.progress-total').textContent = quizConfig.numberOfQuestions;
+    document.querySelectorAll('.progress-total').textContent = "/"+quizConfig.numberOfQuestions;
     quizConfig.timeOptions.forEach(minutes => {
         const btn = document.createElement('button');
         btn.className = 'time-option';
