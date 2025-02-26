@@ -35,6 +35,7 @@ const domElements = {
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('quiz-title').textContent = quizConfig.title;
     document.querySelectorAll('.progress-total').textContent = "/"+quizConfig.numberOfQuestions;
+    
     quizConfig.timeOptions.forEach(minutes => {
         const btn = document.createElement('button');
         btn.className = 'time-option';
@@ -96,7 +97,7 @@ function showQuestion(index) {
     const question = selectedQuestions[index];
     domElements.currentQuestion.textContent = index + 1;
     domElements.questionText.textContent = question.question;
-    document.querySelectorAll('.progress-total').textContent = "/"+quizConfig.numberOfQuestions;
+    domElements.ProgressTotal.textContent = "/"+quizConfig.numberOfQuestions;
     
     domElements.answersContainer.innerHTML = '';
     
