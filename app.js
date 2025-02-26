@@ -27,13 +27,14 @@ const domElements = {
     scoreDisplay: document.getElementById('score-display'),
     totalPoints: document.getElementById('total-points'),
     scorePercentage: document.getElementById('score-percentage'),
-    retakeBtn: document.getElementById('retake-btn')
+    retakeBtn: document.getElementById('retake-btn'),
+    ProgressTotal:document.querySelectorAll('.progress-total')
 };
 
 // Initialisation
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('quiz-title').textContent = quizConfig.title;
-    
+    document.querySelectorAll('.progress-total').textContent = quizConfig.numberOfQuestions;
     quizConfig.timeOptions.forEach(minutes => {
         const btn = document.createElement('button');
         btn.className = 'time-option';
