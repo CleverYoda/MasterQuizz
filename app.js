@@ -96,6 +96,7 @@ function showQuestion(index) {
     const question = selectedQuestions[index];
     domElements.currentQuestion.textContent = index + 1;
     domElements.questionText.textContent = question.question;
+    document.querySelectorAll('.progress-total').textContent = "/"+quizConfig.numberOfQuestions;
     
     domElements.answersContainer.innerHTML = '';
     
